@@ -49,6 +49,16 @@ public class Car {
     @Transient
     private String price;
 
+    public Car(Condition condition, Details details, Location location) {
+        this.condition = condition;
+        this.details = details;
+        this.location = location;
+    }
+
+    public Car() {
+
+    }
+
     public Long getId() {
         return id;
     }
@@ -103,5 +113,18 @@ public class Car {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", createdAt=" + createdAt +
+                ", modifiedAt=" + modifiedAt +
+                ", condition=" + condition +
+                ", details=" + details +
+                ", location=" + location +
+                ", price='" + price + '\'' +
+                '}';
     }
 }
